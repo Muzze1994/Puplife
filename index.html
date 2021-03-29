@@ -20,15 +20,42 @@ När app.html öppnas i en webbläsare ska följande hända... Från sidan ska t
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>PupLife</title>
 </head>
+
 <body>
-    <header>header</header>
-    <main>main</main>
-    <footer>footer</footer>
+
+    <div id="wrapper">
+        <header>
+            <div>
+                <ul>
+                    <li>
+                        <a href="#" class="btn green" id="btnProjectIdea"> Projektidé</a>
+                    </li>
+                    <li>
+                        <a href="#" class="btn green" id="btnBusinessPlan">Affärsplan</a>
+                    </li>
+                    <li>
+                        <a href="#" class="btn green" id="btnContacts">kontaktuppgifter</a>
+                    </li>
+                </ul>
+            </div>
+
+        </header>
+        <main>
+            <div id="content"></div>
+        </main>
+        <footer>
+            <p>footer</p>
+        </footer>
+    </div>
+    <script src="main.js" type="module"></script>
 </body>
+
 </html>
