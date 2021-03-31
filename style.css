@@ -3,6 +3,14 @@ body {
     height: 100%;
 }
 
+h1,
+h2,
+h3,
+h4,
+p {
+    margin-left: 10px;
+}
+
 #wrapper {
     display: flex;
     flex-direction: column;
@@ -52,11 +60,17 @@ header {
 }
 
 main {
-    background-color: #dd8181;
+    background-color: #fab7b7;
     flex: 1 0 auto;
 }
 
 footer {
-    background-color: rgba(4, 0, 5, 0.733);
+    background-color: #2e2a2a;
     margin-top: auto;
+    height: 50px;
+    color: white;
+}
+
+a {
+    color: white;
 }

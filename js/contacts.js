@@ -1,11 +1,9 @@
-//Den sista sidan ska ha valfritt innehåll, men gärna kopplat till din projektidé. Exempelvis dina kontaktuppgifter.
-
 let content = document.getElementById('content');
-const btnContacts = document.getElementById('btnContacts');
 
-function showContactInfo() {
-    console.log("ContactInfo");
-    content.innerHTML = "Info om kontakter";
+export function showContactInfo() {
+    content.innerHTML = "";
+    content.insertAdjacentHTML('afterbegin', '<div id="contactdiv"><h2>Mina kontaktuppgifter</h2></div>');
+    let contactDiv = document.getElementById('contactdiv');
+    contactDiv.insertAdjacentHTML('beforeend', '<p>Namn : Rasmus Lind <br> \
+    Email: Rasmusnyberglind@hotmail.com <br>\</p>');
 }
-
-btnContacts.addEventListener('click', showContactInfo);
