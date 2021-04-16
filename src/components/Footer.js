@@ -6,7 +6,7 @@ class Footer extends Component {
     render() {
         return (
             <footer>
-                <h1>Footer</h1>
+                <a href="index.html"> Gå tillbaka</a>
             </footer >
         )
     }
