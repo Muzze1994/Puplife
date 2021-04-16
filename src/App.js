@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 import Header from './components/Header.js'
 import Main from './components/Main.js';
+import Footer from './components/Footer.js';
 import ReactDOM from "react-dom";
 import HeaderButton from './components/HeaderButton.js';
 
@@ -30,6 +31,7 @@ export class App extends Component {
           <HeaderButton onClick={() => this.handleClick("WebshopView")} > Webshop </HeaderButton>
         </Header>
         <Main view={this.state.view} />
+        <Footer />
       </div>
     )
   }
