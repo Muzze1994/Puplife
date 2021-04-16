@@ -1,0 +1,24 @@
+{
+  "name": "puplife",
+  "version": "1.0.0",
+  "description": "",
+  "main": "eventlisteners.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Muzze1994/Puplife.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Muzze1994/Puplife/issues"
+  },
+  "homepage": "https://github.com/Muzze1994/Puplife#readme",
+  "dependencies": {
+    "parcel-bundler": "^1.12.5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
