@@ -8,7 +8,7 @@ class HeaderButton extends Component {
   
     render() {
       return (
-        <button onClick={this.props.onClick}>
+        <button className ="btn green" onClick={this.props.onClick}>
           {this.props.children}
         </button>
       );
