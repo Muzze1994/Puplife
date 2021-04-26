@@ -2,17 +2,22 @@ html,
 body {
   height: 100%;
 }
-.headerDiv {
+header {
   margin-left: 20%;
 }
 
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 .btn {
   border-radius: 5px;
   padding: 15px 55px;
   font-size: 22px;
   text-decoration: none;
   margin: 30px;
-  color: #fff;
+  color: black;
   position: relative;
   display: inline-block;
 }
@@ -35,6 +40,7 @@ body {
   background-color: #000;
   /*  Making button bigger on hover  */
   transform: scale(1.5) perspective(1px);
+  color: white;
 }
 
 footer {

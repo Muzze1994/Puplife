@@ -1,36 +1,69 @@
 //@ts-check
 
 import React, { Component } from 'react';
-import Header from './components/Header.js'
-import Main from './components/Main.js';
 import Footer from './components/Footer.js';
 import ReactDOM from "react-dom";
-import HeaderButton from './components/HeaderButton.js';
+import Information from './components/Information.js';
+import MyProfile from './components/My_Profile.js';
+import Forum from './components/Forum.js';
+import Webshop from './components/Webshop.js';
+
+import {
+  HashRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 
 export class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      view: 'StartView'
+  constructor(props) {
+    super(props);
+    {
     }
-    this.handleClick = this.handleClick.bind(this);
   }
-  handleClick(text) {
-    this.setState({
-      view: text
-    })
-  }
+
+
   render() {
     return (
+
       <div>
-        <Header> 
-          <HeaderButton onClick={() => this.handleClick("InformationView")} > Info </HeaderButton>
-          <HeaderButton onClick={() => this.handleClick("MyProfileView")} > My Profile </HeaderButton>
-          <HeaderButton onClick={() => this.handleClick("ForumView")} > Forum </HeaderButton>
-          <HeaderButton onClick={() => this.handleClick("WebshopView")} > Webshop </HeaderButton>
-        </Header>
-        <Main view={this.state.view} />
+
+        <Router>
+
+          <header>
+            <Link to="/information" className="btn green">Information</Link>
+
+            <Link to="/forum" className="btn green">Forum</Link>
+
+            <Link to="/myprofile" className="btn green">My Profile</Link>
+
+            <Link to="/webshop" className="btn green">Webshop</Link>
+          </header>
+
+          <main>
+            <Switch>
+              <Route path="/forum">
+                <Forum />
+              </Route>
+              <Route path="/myprofile">
+                <MyProfile />
+              </Route>
+              <Route path="/webshop">
+                <Webshop />
+              </Route>
+              <Route path="/information">
+                <Information />
+              </Route>
+
+            </Switch>
+          </main>
+
+
+        </Router>
+
+
+
         <Footer />
       </div>
     )
