@@ -6,7 +6,7 @@ class Webshop extends Component {
             <div>
                 <p>
                     Webshop
-          </p>
+                </p>
             </div>
         )
     }

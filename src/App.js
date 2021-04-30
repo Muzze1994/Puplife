@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import Footer from './components/Footer.js';
 import ReactDOM from "react-dom";
 import Information from './components/Information.js';
-import MyProfile from './components/My_Profile.js';
+import MyProfile from './components/My-Profile.js';
 import Forum from './components/Forum.js';
 import Webshop from './components/Webshop.js';
 
@@ -23,16 +23,13 @@ export class App extends Component {
     }
   }
 
-
   render() {
     return (
-
-      <div>
-
+      <div className="Content">
         <Router>
 
           <header>
-            <Link to="/information" className="btn green">Information</Link>
+            <Link to="/" className="btn green">Information</Link>
 
             <Link to="/forum" className="btn green">Forum</Link>
 
@@ -43,6 +40,7 @@ export class App extends Component {
 
           <main>
             <Switch>
+
               <Route path="/forum">
                 <Forum />
               </Route>
@@ -52,17 +50,13 @@ export class App extends Component {
               <Route path="/webshop">
                 <Webshop />
               </Route>
-              <Route path="/information">
+              <Route path="/">
                 <Information />
               </Route>
 
             </Switch>
           </main>
-
-
         </Router>
-
-
 
         <Footer />
       </div>
