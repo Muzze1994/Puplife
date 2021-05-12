@@ -5,7 +5,7 @@ import Footer from './components/Footer.js';
 import ReactDOM from "react-dom";
 import Information from './components/Information.js';
 import MyProfile from './components/My-Profile.js';
-import Forum from './components/Forum.js';
+import Forum from './components/Forum/Forum.js';
 import Webshop from './components/Webshop.js';
 
 import {

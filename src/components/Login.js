@@ -33,7 +33,7 @@ class Login extends Component {
     render() {
         const user = localStorage.getItem('user');
 
-        if (localStorage.getItem('user') == null) {
+        if (user == null) {
             return (
                 <div className="LoginDiv">
                     <form onSubmit={this.handleSubmit}>
