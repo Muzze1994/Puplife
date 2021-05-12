@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import Caller from '../business/Logic.js';
-import TodoView from './Todo-view.js';
+import Caller from '../../business/Logic.js';
+import ForumPostView from './Forum-post-view.js';
 
-class Todos extends Component {
+class ForumPosts extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
             UserInput: '',
-            Todos: []
+            Posts: []
         };
     }
 
@@ -22,42 +22,43 @@ class Todos extends Component {
         Caller.get(this.state.UserInput, {})
             .then(res => {
                 if (Array.isArray(res.data)) {
-                    const Todos = res.data;
-                    console.log(Todos);
-                    this.setState({ Todos })
+                    const Posts = res.data;
+                    console.log(Posts);
+                    this.setState({ Posts })
                 }
                 else {
                     this.setState({
-                        Todos: [res.data]
+                        Posts: [res.data]
                     })
                 }
             })
             .catch((error) => {
                 console.log(error)
             });
+
     }
+
+
     render() {
 
-        const Todos = this.state.Todos;
+        const Posts = this.state.Posts;
+        
         return (
             <div>
-                <p>Type a number for a specific todo or leave blank to see every todo in the list. (1-200)</p>
+                <br></br>
                 <div>
                     <form onSubmit={this.handleSubmit}>
-                        <label>
-                            User ID:
-            <input type="number" value={this.state.UserInput} onChange={this.handleChange} />
-                        </label>
-                        <button type="submit">Get one todo</button>
+                        <button type="submit">Get all blog posts</button>
                     </form>
                 </div>
 
                 <div>
-                    {Todos.map(todos =>
-                        <TodoView key={todos.id} todos={todos} />
+                    {Posts.map(posts =>
+                        <ForumPostView key={posts.id} posts={posts} />
 
                     )}
                 </div>
+
             </div>
         )
 
@@ -65,4 +66,4 @@ class Todos extends Component {
     }
 }
 
-export default Todos
+export default ForumPosts

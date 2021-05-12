@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Todos from './Todos.js';
+import ForumPostView from './Forum/Forum-post-view.js';
 
 class Information extends Component {
     constructor(props) {
@@ -10,7 +10,7 @@ class Information extends Component {
     render() {
         return (
             <div>
-                <Todos />
+              Information
             </div>
         )
     }
