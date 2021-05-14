@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import Caller from '../../business/Logic.js';
 import ForumPostView from './Forum-post-view.js';
 
-class ForumPosts extends Component {
+class ForumPost extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
             UserInput: '',
-            Posts: []
+            Post: []
         };
     }
 
@@ -16,45 +16,39 @@ class ForumPosts extends Component {
         this.setState({ UserInput: event.target.value });
     }
 
-    handleSubmit = event => {
-        event.preventDefault();
-
+    getAllBlogPosts() {
         Caller.get(this.state.UserInput, {})
             .then(res => {
                 if (Array.isArray(res.data)) {
-                    const Posts = res.data;
-                    console.log(Posts);
-                    this.setState({ Posts })
+                    const Post = res.data;
+                    console.log(Post);
+                    this.setState({ Post })
                 }
                 else {
                     this.setState({
-                        Posts: [res.data]
+                        Post: [res.data]
                     })
                 }
             })
             .catch((error) => {
                 console.log(error)
             });
-
     }
 
+    componentDidMount() {
+       this.getAllBlogPosts();
+    }
 
     render() {
 
-        const Posts = this.state.Posts;
-        
+        const Post = this.state.Post;
+
         return (
             <div>
                 <br></br>
                 <div>
-                    <form onSubmit={this.handleSubmit}>
-                        <button type="submit">Get all blog posts</button>
-                    </form>
-                </div>
-
-                <div>
-                    {Posts.map(posts =>
-                        <ForumPostView key={posts.id} posts={posts} />
+                    {Post.map(post =>
+                        <ForumPostView key={post.id} post={post} />
 
                     )}
                 </div>
@@ -66,4 +60,4 @@ class ForumPosts extends Component {
     }
 }
 
-export default ForumPosts
+export default ForumPost

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Post } from '../../business/Post.js';
+import PropTypes from 'prop-types';
 
 class CreateForumPost extends Component {
     constructor(props) {
@@ -26,8 +27,7 @@ class CreateForumPost extends Component {
         var current = new Date();
         var lsUser = localStorage.getItem('user');
 
-        if(localStorage.length > 0){
-            const newForumPost = {
+        const newForumPost = {
             title: this.state.title,
             text: this.state.text,
             poster: lsUser,
@@ -44,33 +44,27 @@ class CreateForumPost extends Component {
         console.log(new Date())
 
         Post(newForumPost);
-        }
-        else 
-        {
-            alert('Please log in to create a forum post!');
-        }
-        
 
     }
 
-    render() {
 
-        const Post = this.state.newForumPost;
+    render() {
 
         return (
             <div>
+                <br></br>
                 <form onSubmit={this.handleSubmit}>
                     <div className="field">
                         <label className="label">
                             Title:
-            <input className="input is-primary" name="title" placeholder="Enter title..." value={this.state.title} onChange={this.handleChange} />
+            <input className="input is-primary" name="title" placeholder="Enter title..." value={this.state.title} onChange={this.handleChange} required />
                         </label>
                     </div>
 
                     <div className="field">
                         <label className="label">
                             Text:
-            <textarea className="textarea is-primary" name="text" placeholder="Enter text..." value={this.state.text} onChange={this.handleChange} />
+            <textarea className="textarea is-primary" name="text" placeholder="Enter text..." value={this.state.text} onChange={this.handleChange} required />
                         </label>
                     </div>
 
@@ -81,6 +75,13 @@ class CreateForumPost extends Component {
         )
 
     }
+}
+
+CreateForumPost.propTypes = {
+    id: PropTypes.number,
+    title: PropTypes.string,
+    text: PropTypes.string,
+    poster: PropTypes.string
 }
 
 export default CreateForumPost

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Delete } from '../../business/Delete.js';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 class ForumPostView extends Component {
     constructor(props) {
@@ -13,10 +14,10 @@ class ForumPostView extends Component {
         const id = e.target.id;
 
         Delete(id);
-
     }
 
     render() {
+
         return (
             <div>
                 <div className="card mb-2">
@@ -25,14 +26,14 @@ class ForumPostView extends Component {
                             <a href="#" data-toggle="collapse" data-target=".forum-content"><img src="https://bootdey.com/img/Content/avatar/avatar1.png" className="mr-3 rounded-circle" width="50" alt="User" /></a>
                             <div className="media-body">
                                 <h6>
-                                    <Link to={`/post/${this.props.posts.id}`} >
-                                        <a href="#" data-toggle="collapse" data-target=".forum-content" className="text-body">{this.props.posts.title}</a>
+                                    <Link to={`/post/${this.props.post.id}`} >
+                                        <a href="#" data-toggle="collapse" data-target=".forum-content" className="text-body">{this.props.post.title}</a>
                                     </Link>
                                 </h6>
                                 <p className="text-secondary">
-                                    {this.props.posts.text}
+                                    {this.props.post.text}
                                 </p>
-                                <p className="text-muted">{this.props.posts.poster} posted <span className="text-secondary font-weight-bold">{this.props.posts.postDate}</span></p>
+                                <p className="text-muted">{this.props.post.poster} posted <span className="text-secondary font-weight-bold">{this.props.post.postDate}</span></p>
                                 <div className="text-muted small text-center align-self-center">
                                     <span className="d-none d-sm-inline-block"><i className="far fa-eye"></i> 19</span>
                                     <span><i className="far fa-comment ml-2"></i> 3</span>
@@ -40,18 +41,15 @@ class ForumPostView extends Component {
                             </div>
                         </div>
                     </div>
-
                     <a className="fas fa-trash-alt"
-                        id={this.props.posts.id}
+                        id={this.props.post.id}
                         onClick={this.deleteForumPost}>
-
                     </a>
                 </div>
             </div>
-
-
         )
     }
 }
 
 export default ForumPostView
+
