@@ -4,9 +4,13 @@ import React, { Component } from 'react';
 import Footer from './components/Footer.js';
 import ReactDOM from "react-dom";
 import Information from './components/Information.js';
-import MyProfile from './components/My-Profile.js';
+import MyProfile from './components/MyProfile/My-Profile.js';
 import Forum from './components/Forum/Forum.js';
 import Webshop from './components/Webshop.js';
+import ForumDetail from './components/Forum/Forum-detail.js';
+import Header from './components/Header.js';
+import DogInformation from './components/MyProfile/Dog-information.js';
+import PropTypes from 'prop-types';
 
 import {
   HashRouter as Router,
@@ -19,8 +23,6 @@ import {
 export class App extends Component {
   constructor(props) {
     super(props);
-    {
-    }
   }
 
   render() {
@@ -28,7 +30,7 @@ export class App extends Component {
       <div className="Content">
         <Router>
 
-          <header>
+          <Header appTitle={"PupLife"}>
             <Link to="/" className="btn green">Information</Link>
 
             <Link to="/forum" className="btn green">Forum</Link>
@@ -36,7 +38,7 @@ export class App extends Component {
             <Link to="/myprofile" className="btn green">My Profile</Link>
 
             <Link to="/webshop" className="btn green">Webshop</Link>
-          </header>
+          </Header>
 
           <main>
             <Switch>
@@ -50,6 +52,12 @@ export class App extends Component {
               <Route path="/webshop">
                 <Webshop />
               </Route>
+              <Route 
+              path="/post/:id" 
+              component={ForumDetail}/>
+              <Route 
+              path="/dog/:dogName" 
+              component={DogInformation}/>
               <Route path="/">
                 <Information />
               </Route>
@@ -63,3 +71,8 @@ export class App extends Component {
     )
   }
 }
+
+App.propTypes = {
+  appTitle: PropTypes.number,
+}
+

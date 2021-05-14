@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ForumPostView from './Forum/Forum-post-view.js';
+import PropTypes from 'prop-types';
 
 class Information extends Component {
     constructor(props) {

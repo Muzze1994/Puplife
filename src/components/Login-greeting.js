@@ -17,6 +17,7 @@ class LoginGreeting extends Component {
                 <h1>Welcome {this.props.user}</h1>
                 <button onClick={this.clearLocalStorage}>Log out</button>
             </div>
+
         )
     }
 }

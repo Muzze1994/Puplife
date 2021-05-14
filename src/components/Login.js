@@ -38,7 +38,7 @@ class Login extends Component {
                 <div className="LoginDiv">
                     <form onSubmit={this.handleSubmit}>
                         <label>
-                            Name:
+                            Username:
             <input name="user" value={this.state.user} onChange={this.handleChange} />
                         </label>
                         <input type="submit" value="Create account name" />

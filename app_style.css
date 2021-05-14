@@ -1,4 +1,4 @@
-@import 'bulma/css/bulma.css';
+@import "bulma/css/bulma.css";
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css";
 html,
 body {
@@ -70,22 +70,35 @@ footer a {
 }
 
 .LoginDiv {
-  float: right;
   width: 30%;
-
 }
 
 .ForumTextDiv {
   margin-top: 10px;
 }
 
-.field{
+.field {
   width: 25%;
 }
 
-.card{
-  width: 25%
-}
-.delete{
+.delete {
   float: right;
+}
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 0 solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  width: 25%;
+}
+
+.appTitle {
+  width: 50px;
+  margin-left: 20%;
+  font-family: "Shadows Into Light", cursive;
 }
