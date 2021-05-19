@@ -3,6 +3,8 @@ import CreateForumPost from './Create-forum-post.js';
 import ForumPost from './Forum-post.js';
 import Login from '../Login.js';
 import ErrorBoundary from '../ErrorBoundary.js';
+import ThemeTogglerButton from '../Context/Theme-toggle-button';
+
 
 class Forum extends Component {
     constructor(props) {
@@ -14,7 +16,7 @@ class Forum extends Component {
         if (localStorage.length > 0) {
             return (
                 <div>
-                    <Login />
+                    <Login/>
                     <ErrorBoundary>
                         <CreateForumPost />
                     </ErrorBoundary>
@@ -24,7 +26,7 @@ class Forum extends Component {
         }
         else {
             return (
-                <Login />
+                <Login message={"Please log in to see forum posts"}/>
             )
         }
     }

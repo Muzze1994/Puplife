@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Caller from '../../business/Logic.js';
+import Caller from '../../api/Caller.js';
 import ForumPostView from './Forum-post-view.js';
 
 class ForumPost extends Component {
@@ -10,6 +10,8 @@ class ForumPost extends Component {
             UserInput: '',
             Post: []
         };
+
+        this.getAllBlogPosts = this.getAllBlogPosts.bind(this);
     }
 
     handleChange = event => {
@@ -36,7 +38,7 @@ class ForumPost extends Component {
     }
 
     componentDidMount() {
-       this.getAllBlogPosts();
+        this.getAllBlogPosts();
     }
 
     render() {
@@ -49,7 +51,6 @@ class ForumPost extends Component {
                 <div>
                     {Post.map(post =>
                         <ForumPostView key={post.id} post={post} />
-
                     )}
                 </div>
 

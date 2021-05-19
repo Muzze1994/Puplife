@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Caller from '../../business/Logic.js';
+import Caller from '../../api/Caller.js'
 import ForumPostView from './Forum-post-view.js';
 
 class ForumDetail extends Component {

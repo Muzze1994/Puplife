@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Post } from '../../business/Post.js';
-import PropTypes from 'prop-types';
+import { Post } from '../../api/Post.js';
 
 class CreateForumPost extends Component {
     constructor(props) {
@@ -46,6 +45,7 @@ class CreateForumPost extends Component {
         Post(newForumPost);
 
     }
+    
 
 
     render() {
@@ -75,13 +75,6 @@ class CreateForumPost extends Component {
         )
 
     }
-}
-
-CreateForumPost.propTypes = {
-    id: PropTypes.number,
-    title: PropTypes.string,
-    text: PropTypes.string,
-    poster: PropTypes.string
 }
 
 export default CreateForumPost

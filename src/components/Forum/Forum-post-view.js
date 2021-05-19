@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Delete } from '../../business/Delete.js';
+import { Delete } from '../../api/Delete.js';
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
+import ConfirmationBtn from '../Confirmation-button.js';
 
 class ForumPostView extends Component {
     constructor(props) {
@@ -11,10 +11,12 @@ class ForumPostView extends Component {
     }
 
     deleteForumPost(e) {
+        e.preventDefault();
         const id = e.target.id;
 
         Delete(id);
     }
+
 
     render() {
 
@@ -41,10 +43,13 @@ class ForumPostView extends Component {
                             </div>
                         </div>
                     </div>
-                    <a className="fas fa-trash-alt"
+                    <ConfirmationBtn
+                        message={"delete"}
                         id={this.props.post.id}
-                        onClick={this.deleteForumPost}>
-                    </a>
+                        dialogTitle={"Remove forum post"}
+                        dialogDescr={"Are you sure?"}
+                        handleClick={this.deleteForumPost}
+                    />
                 </div>
             </div>
         )
