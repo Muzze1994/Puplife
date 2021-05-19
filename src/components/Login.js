@@ -36,6 +36,7 @@ class Login extends Component {
         if (user == null) {
             return (
                 <div className="LoginDiv">
+                    <h2>{this.props.message}</h2>
                     <form onSubmit={this.handleSubmit}>
                         <label>
                             Username:
@@ -44,7 +45,6 @@ class Login extends Component {
                         <input type="submit" value="Create account name" />
                     </form>
                 </div>
-
             );
         }
         else {

@@ -3,11 +3,8 @@
 html,
 body {
   height: 100%;
-  background-image: url("img/pup-photo.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
+
 .Content {
   display: flex;
   flex-direction: column;
@@ -15,6 +12,7 @@ body {
   width: 100%;
   position: absolute;
 }
+
 header {
   margin-left: 30%;
 }
@@ -63,6 +61,7 @@ footer {
   margin-top: auto;
   flex: 0 0 50px;
   width: 100%;
+  position: fixed;
 }
 
 footer a {
@@ -71,6 +70,7 @@ footer a {
 
 .LoginDiv {
   width: 30%;
+  float:right;
 }
 
 .ForumTextDiv {
@@ -94,11 +94,18 @@ footer a {
   background-clip: border-box;
   border: 0 solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
-  width: 25%;
 }
 
 .appTitle {
   width: 50px;
   margin-left: 20%;
+  font-family: "Shadows Into Light", cursive;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
   font-family: "Shadows Into Light", cursive;
 }

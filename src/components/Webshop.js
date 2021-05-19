@@ -4,9 +4,9 @@ class Webshop extends Component {
     render() {
         return (
             <div>
-                <p>
+                <h1>
                     Webshop
-                </p>
+                </h1>
             </div>
         )
     }

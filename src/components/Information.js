@@ -1,16 +1,11 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 
 class Information extends Component {
-    constructor(props) {
-        super(props); {
-        }
-    }
 
     render() {
         return (
             <div>
-              Information
+                <h1>Information</h1>
             </div>
         )
     }

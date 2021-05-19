@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import DogInformation from './Dog-information';
 import DropDownContent from './Drop-drop-down-content';
 
 class MyDogView extends Component {
@@ -19,14 +17,6 @@ class MyDogView extends Component {
     }
     handleSubmit = (event) => {
         event.preventDefault();
-
-        if (this.state.dogName == "akilles") {
-            alert("Akilles är rätt");
-            console.log(this.state.dogName)
-        }
-        else {
-            throw new Error("Fel hund");
-        }
 
     }
 

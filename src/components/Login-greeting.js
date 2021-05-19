@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ConfirmationBtn from './Confirmation-button.js';
 
 class LoginGreeting extends Component {
 
@@ -15,9 +16,8 @@ class LoginGreeting extends Component {
         return (
             <div className="LoginDiv">
                 <h1>Welcome {this.props.user}</h1>
-                <button onClick={this.clearLocalStorage}>Log out</button>
+                <ConfirmationBtn message={"Log out"} handleClick={this.clearLocalStorage} dialogTitle={"Log out"} dialogDescr={"Are you sure?"}/>
             </div>
-
         )
     }
 }

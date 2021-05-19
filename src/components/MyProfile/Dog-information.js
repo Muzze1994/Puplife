@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
+import DropDownContent from './Drop-drop-down-content';
 import MyDogView from './My-dog-view';
-import PropTypes from 'prop-types';
 
 class DogInformation extends Component {
     constructor(props) {
         super(props);
-
+        
     }
 
     componentDidMount()
