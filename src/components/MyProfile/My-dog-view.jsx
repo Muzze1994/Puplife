@@ -23,7 +23,6 @@ class MyDogView extends Component {
     render() {
 
         const DogName = this.props.dogName;
-
         return (
 
             <div>
@@ -48,22 +47,13 @@ class MyDogView extends Component {
                         </div>
                     </div>
                 </div>
-                <form onSubmit={this.handleSubmit}>
-                    <div className="field">
-                        <label className="label">
-                            Dog name:
-            <input className="input is-primary" name="dogName" placeholder="Enter dogs name..." value={this.state.dogName} onChange={this.handleChange} />
-                        </label>
-                    </div>
-                    <input type="submit" value="Add new dog" />
-                </form>
             </div>
         )
     }
 }
 
 MyDogView.propTypes = {
-    dogName: PropTypes.array
+    dogName: PropTypes.array.isRequired
 }
 
 export default MyDogView

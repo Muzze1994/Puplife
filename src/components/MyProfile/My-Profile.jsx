@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import Login from '../Login.js';
-import ErrorBoundary from '../ErrorBoundary.js';
-import MyDogView from './My-dog-view.js';
+import Login from '../Login';
+import MyDogView from './My-dog-view';
 import PropTypes from 'prop-types';
 
 class MyProfile extends Component {
@@ -32,7 +31,8 @@ class MyProfile extends Component {
 }
 
 MyProfile.propTypes = {
-    dogName: PropTypes.array
+    dogName: PropTypes.array,
+    message: PropTypes.string
 }
 
 export default MyProfile
