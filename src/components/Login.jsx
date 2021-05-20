@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import LoginGreeting from './Login-greeting.js';
+import ThemableH1 from "./Context/ThemableH1";
+import ThemableP from "./Context/ThemableP";
+import LoginGreeting from './Login-greeting';
+import PropTypes from 'prop-types';
 
 class Login extends Component {
     constructor(props) {
@@ -36,13 +39,13 @@ class Login extends Component {
         if (user == null) {
             return (
                 <div className="LoginDiv">
-                    <h2>{this.props.message}</h2>
+                    <ThemableH1>{this.props.message}</ThemableH1>
                     <form onSubmit={this.handleSubmit}>
                         <label>
-                            Username:
+                            <ThemableP>Username:</ThemableP>
             <input name="user" value={this.state.user} onChange={this.handleChange} />
                         </label>
-                        <input type="submit" value="Create account name" />
+                        <input className="LoginInput" type="submit" value="Create account name" />
                     </form>
                 </div>
             );
@@ -54,6 +57,10 @@ class Login extends Component {
         }
 
     }
+}
+
+Login.propTypes = {
+    message: PropTypes.string.required
 }
 
 export default Login

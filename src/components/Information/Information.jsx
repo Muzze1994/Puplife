@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import ThemableH1 from '../Context/ThemableH1';
 
 class Information extends Component {
 
     render() {
         return (
             <div>
-                <h1>Information</h1>
+                <ThemableH1>Information</ThemableH1>
             </div>
         )
     }

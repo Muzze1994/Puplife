@@ -22,9 +22,11 @@ class ConfirmationBtn extends React.Component {
     this.setState({ open: false });
   };
 
-  handleAgree = () => {
+  handleAgree = (e) => {
     console.log("Yes");
     this.handleClose();
+    this.props.myFunction(e);
+    console.log(this.props.myFunction())
   };
   handleDisagree = () => {
     console.log("No");
@@ -57,7 +59,7 @@ class ConfirmationBtn extends React.Component {
             <button onClick={this.handleDisagree} color="primary">
               No
             </button>
-            <button onClick={this.props.handleClick} id={this.props.id} autoFocus> 
+            <button onClick={this.handleAgree} id={this.props.id} autoFocus> 
               Yes
             </button>
           </DialogActions>
