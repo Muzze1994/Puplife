@@ -6,7 +6,9 @@ class Footer extends Component {
     render() {
         return (
             <footer>
-                <a href="index.html"> Gå tillbaka</a>
+                <div className="footerDiv">
+                    {this.props.children}
+                </div>
             </footer >
         )
     }

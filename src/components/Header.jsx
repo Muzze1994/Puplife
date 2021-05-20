@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import PropTypes from 'prop-types';
+import ThemableH1 from "./Context/ThemableH1";
 
 class Header extends Component {
     render() {
@@ -8,8 +9,6 @@ class Header extends Component {
             <header>
                 <div className="appTitle">
                     <h1>{this.props.appTitle}</h1>
-                </div>
-                <div>
                     {this.props.children}
                 </div>
 
