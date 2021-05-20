@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Post } from '../../api/Post.js';
+import { Post } from '../../api/Post';
+import ThemableP from '../Context/ThemableP';
 
 class CreateForumPost extends Component {
     constructor(props) {
@@ -43,10 +44,7 @@ class CreateForumPost extends Component {
         console.log(new Date())
 
         Post(newForumPost);
-
     }
-    
-
 
     render() {
 
@@ -56,14 +54,14 @@ class CreateForumPost extends Component {
                 <form onSubmit={this.handleSubmit}>
                     <div className="field">
                         <label className="label">
-                            Title:
+                            <ThemableP>Title:</ThemableP>
             <input className="input is-primary" name="title" placeholder="Enter title..." value={this.state.title} onChange={this.handleChange} required />
                         </label>
                     </div>
 
                     <div className="field">
                         <label className="label">
-                            Text:
+                        <ThemableP>Text:</ThemableP>
             <textarea className="textarea is-primary" name="text" placeholder="Enter text..." value={this.state.text} onChange={this.handleChange} required />
                         </label>
                     </div>

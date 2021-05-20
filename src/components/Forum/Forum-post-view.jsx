@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Delete } from '../../api/Delete.js';
+import { Delete } from '../../api/Delete';
 import { Link } from 'react-router-dom';
-import ConfirmationBtn from '../Confirmation-button.js';
+import ConfirmationBtn from '../Confirmation-button';
 
 class ForumPostView extends Component {
     constructor(props) {
@@ -14,9 +14,8 @@ class ForumPostView extends Component {
         e.preventDefault();
         const id = e.target.id;
 
-        Delete(id);
+        Delete(id)
     }
-
 
     render() {
 
@@ -48,7 +47,7 @@ class ForumPostView extends Component {
                         id={this.props.post.id}
                         dialogTitle={"Remove forum post"}
                         dialogDescr={"Are you sure?"}
-                        handleClick={this.deleteForumPost}
+                        myFunction={this.deleteForumPost}
                     />
                 </div>
             </div>
