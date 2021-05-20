@@ -4,17 +4,17 @@ html,
 body {
   height: 100%;
 }
+#root{
+  height: 100%
+}
 
 .Content {
-  display: flex;
-  flex-direction: column;
   height: 100%;
   width: 100%;
-  position: absolute;
 }
 
 header {
-  margin-left: 30%;
+  background: #2e2a2a;;
 }
 
 ul {
@@ -56,7 +56,7 @@ ul {
 footer {
   bottom: 0;
   background-color: #2e2a2a;
-  height: 2em;
+  height: 55px;
   left: 0;
   margin-top: auto;
   flex: 0 0 50px;
@@ -67,23 +67,37 @@ footer {
 footer a {
   color: white;
 }
-
-.LoginDiv {
-  width: 30%;
-  float:right;
+.footerDiv{
+  height: 100%;
+  margin-left: 10%;
+  padding-top: 10px;
 }
 
+.Footer-icon{
+  padding-top: 5px;
+  margin-left: 30px;
+}
+
+.LogOutDiv {
+  width: 30%;
+  margin-left: 70%;
+}
+
+.LoginDiv{
+  margin-top: 30px;
+  margin-left: 30px;
+}
+.LoginInput{
+  margin-top: 5px;
+}
 .ForumTextDiv {
   margin-top: 10px;
-}
-
-.field {
-  width: 25%;
 }
 
 .delete {
   float: right;
 }
+
 .card {
   position: relative;
   display: flex;
@@ -94,11 +108,12 @@ footer a {
   background-clip: border-box;
   border: 0 solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
+  
 }
 
 .appTitle {
-  width: 50px;
-  margin-left: 20%;
+  color:white;
+  margin-left: 40%;
   font-family: "Shadows Into Light", cursive;
 }
 
@@ -108,4 +123,12 @@ h2,
 h3,
 h4 {
   font-family: "Shadows Into Light", cursive;
+}
+
+.themableDiv{
+  height: 100%
+}
+
+.AkillesPic{
+  width: 40%;
 }
