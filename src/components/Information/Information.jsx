@@ -1,16 +1,12 @@
 import React, { Component } from 'react';
-import Todos from './Todos.js';
+import ThemableH1 from '../Context/ThemableH1';
 
 class Information extends Component {
-    constructor(props) {
-        super(props); {
-        }
-    }
 
     render() {
         return (
             <div>
-                <Todos />
+                <ThemableH1>Information</ThemableH1>
             </div>
         )
     }

@@ -17,8 +17,13 @@
   },
   "homepage": "https://github.com/Muzze1994/Puplife#readme",
   "dependencies": {
+    "@material-ui/core": "^4.11.4",
+    "@types/react": "^17.0.5",
     "axios": "^0.21.1",
+    "bootstrap": "^5.0.0",
+    "bulma": "^0.9.2",
     "parcel-bundler": "^1.12.5",
+    "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router": "^5.2.0",
