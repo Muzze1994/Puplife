@@ -1,20 +1,8 @@
 @import "bulma/css/bulma.css";
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css";
-html,
-body {
-  height: 100%;
-}
-#root{
-  height: 100%
-}
-
-.Content {
-  height: 100%;
-  width: 100%;
-}
 
 header {
-  background: #2e2a2a;;
+  background: #332940;
 }
 
 ul {
@@ -22,44 +10,12 @@ ul {
   padding: 0;
   margin: 0;
 }
-.btn {
-  border-radius: 5px;
-  padding: 15px 55px;
-  font-size: 22px;
-  text-decoration: none;
-  margin: 30px;
-  color: black;
-  position: relative;
-  display: inline-block;
-}
-
-.btn:active {
-  transform: translate(0px, 5px);
-  -webkit-transform: translate(0px, 5px);
-  box-shadow: 0px 1px 0px 0px;
-}
-
-.green {
-  background-color: #d7d7d7;
-  box-shadow: 3px 5px 5px #888888;
-  border-radius: 2px;
-  transition: all 1s ease;
-  transform: scale(1);
-}
-
-.green:hover {
-  /*  Making button bigger on hover  */
-  transform: scale(1.5) perspective(1px);
-  color: white;
-}
-
 footer {
   bottom: 0;
-  background-color: #2e2a2a;
+  background-color: #332940;
   height: 55px;
   left: 0;
   margin-top: auto;
-  flex: 0 0 50px;
   width: 100%;
   position: fixed;
 }
@@ -67,13 +23,13 @@ footer {
 footer a {
   color: white;
 }
-.footerDiv{
+.footerDiv {
   height: 100%;
   margin-left: 10%;
   padding-top: 10px;
 }
 
-.Footer-icon{
+.Footer-icon {
   padding-top: 5px;
   margin-left: 30px;
 }
@@ -83,11 +39,11 @@ footer a {
   margin-left: 70%;
 }
 
-.LoginDiv{
+.LoginDiv {
   margin-top: 30px;
   margin-left: 30px;
 }
-.LoginInput{
+.LoginInput {
   margin-top: 5px;
 }
 .ForumTextDiv {
@@ -108,11 +64,10 @@ footer a {
   background-clip: border-box;
   border: 0 solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
-  
 }
 
 .appTitle {
-  color:white;
+  color: white;
   margin-left: 40%;
   font-family: "Shadows Into Light", cursive;
 }
@@ -125,10 +80,13 @@ h4 {
   font-family: "Shadows Into Light", cursive;
 }
 
-.themableDiv{
-  height: 100%
+.themableDiv {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
 }
 
-.AkillesPic{
+.AkillesPic {
   width: 40%;
 }

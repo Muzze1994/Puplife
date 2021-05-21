@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ForumPostView from './Forum-post-view';
-import { getAllBlogPosts } from '../../api/Get-all-blog-posts';
+import { getAllForumPosts } from '../../api/Get-all-forum-posts';
 
 class ForumPost extends Component {
     constructor(props) {
@@ -17,13 +17,11 @@ class ForumPost extends Component {
     }
 
     componentDidMount() {
-        getAllBlogPosts()
+        getAllForumPosts()
             .then(res => {
                 this.setState({ Post: res.data })
             })
-            .catch((err) => {
-                console.log(err)
-            })
+            
     }
 
     render() {
@@ -33,7 +31,7 @@ class ForumPost extends Component {
         return (
             <div>
                 <br></br>
-                <div>
+                <div className="postDiv">
                     {Post.map(post =>
                         <ForumPostView key={post.id} post={post}/>
                     )}

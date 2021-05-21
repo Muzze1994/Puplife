@@ -48,6 +48,8 @@ class ForumPostView extends Component {
                         dialogTitle={"Remove forum post"}
                         dialogDescr={"Are you sure?"}
                         myFunction={this.deleteForumPost}
+                        disagree={"No"}
+                        agree={"Yes"}
                     />
                 </div>
             </div>
