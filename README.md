@@ -5,7 +5,7 @@ Just nu har jag ändrat så att applikationen liknar det som i en mobil-app. Kna
 
 My profile har ändrats så att man kan logga in och ut genom att bara skriva in ett användarnamn. Än så länge kan man inte skapa fler användare utan det är bara för att kolla hur det ska se ut. Har även en lista med hårdkodade hundar för att visa hur det är tänkt att vara i framtiden. Trycker man på en hund så ska information komma upp om hunden samt bilder och aktiveter man ska kunna utföra.
 På forum så har jag ändrat så att man anropar ett api för att antingen skapa ett inlägg eller få ut alla inlägg. Trycker man sedan på en titel så kommer man till det inlägget med ett hårdkodat svar.
-Man måste vara inloggad för att kunna se my profile och forum. När man skapar ett inlägg så blir det användarnamnet man använde för att logga in den som postar. Sedan sätts automatiskt vilken tid inlägget skapades.
+Man måste vara inloggad för att kunna se my profile och forum. När man skapar ett inlägg så blir det användarnamnet man använde för att logga in den som postar. Sedan sätts automatiskt vilken tid inlägget skapades. Knappen för att logga ut och för att radera inlägg är min återanvändningsbara komponent som är en confirmation-button.
 Webshop och information består just nu bara av statiska divar med respektive namn.
 
 Jag använder router-react för att lagra data i URL i mina 4 komponenter Information, Forum, Webshop och My-Profile.
