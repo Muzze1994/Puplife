@@ -1,13 +1,16 @@
 {
+  "homepage": "https://Muzze1994.github.io/Puplife/",
   "name": "puplife",
   "version": "1.0.0",
   "description": "",
   "main": "eventlisteners.js",
   "scripts": {
-    "start": "parcel index.html app.html",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "build": "react-scripts build"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "repository": {
     "type": "git",
@@ -18,7 +21,6 @@
   "bugs": {
     "url": "https://github.com/Muzze1994/Puplife/issues"
   },
-  "homepage": "https://muzze1994.github.io/Puplife/",
   "dependencies": {
     "@material-ui/core": "^4.11.4",
     "@types/react": "^17.0.5",
@@ -33,5 +35,17 @@
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.3"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
